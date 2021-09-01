@@ -9,7 +9,8 @@
 /*   Updated: 2021/08/26 18:08:46 by nmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, int len)
 {
