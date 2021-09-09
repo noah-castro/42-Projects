@@ -18,7 +18,7 @@ SRCS	=	ft_isalpha.c \
 
 OBJS	=	${SRCS:.c=.o}
 
-CC	= gcc
+CC	= clang
 
 CFLAGS	= -Wall -Wextra -Werror -g
 
@@ -27,3 +27,14 @@ CFLAGS	= -Wall -Wextra -Werror -g
 
 ${NAME}:	${OBJS}
 			ar -rcs ${NAME} ${OBJS}
+
+all:	${NAME}
+
+limp:
+	$(RM) a.out
+
+clean:
+	rm -f ${OBJS}
+
+fclean: clean
+	rm -f ${NAME}

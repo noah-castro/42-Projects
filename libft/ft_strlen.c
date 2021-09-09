@@ -23,8 +23,8 @@ int	ft_strlen(const char *s)
 	return (index);
 }
 
-int	main(const char *s)
+int	main()
 {
-	s = "";
-	printf("%d\n", ft_strlen(s));
+	char *s = "abc";
+	printf("%d", ft_strlen(s));
 }

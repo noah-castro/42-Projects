@@ -21,9 +21,9 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, int len)
 	*p_src = (char *)src;
 	*p_dst = (char *)dst;
 	index = 0;
-	while (index < len)
+
+	if(index < len)
 	{
-		p_dst[index] = p_src[index];
-		index++;
+		p_dst = p_src;
 	}
 }

@@ -17,6 +17,7 @@ void *ft_memmove(void *dst, const void *src, int len)
 	int	index;
 	char	*p_dst;
 	char	*p_src;
+	char	*overlapper;
 
 	*p_dst = (char *)dst;
 	*p_src = (char *)src;
@@ -24,6 +25,17 @@ void *ft_memmove(void *dst, const void *src, int len)
 
 	while(index < len);
 	{
-
+		overlapper[index] = p_src[index];
+		index++;
 	}
+
+	index = 0;
+
+	while(index <len)
+	{
+		p_dst[index] = overlapper[index];
+		index++;
+	}
+
+	return(dst);
 }
