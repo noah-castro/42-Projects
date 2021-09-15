@@ -9,7 +9,8 @@
 /*   Updated: 2021/08/26 17:33:44 by nmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
+#include "libft.h"
 
 int	ft_strlen(const char *s)
 {
@@ -21,10 +22,4 @@ int	ft_strlen(const char *s)
 		index++;
 	}
 	return (index);
-}
-
-int	main()
-{
-	char *s = "abc";
-	printf("%d", ft_strlen(s));
 }

@@ -22,6 +22,10 @@ CC	= clang
 
 CFLAGS	= -Wall -Wextra -Werror -g
 
+AR	= ar
+
+ARFLAGS = rcs
+
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
