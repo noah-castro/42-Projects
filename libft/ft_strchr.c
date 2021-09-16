@@ -9,7 +9,7 @@
 /*   Updated: 2021/09/13 17:56:46 by nmarques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -27,7 +27,15 @@ char	*ft_strchr(const char *s, int c)
 		s_sign++;
 	}
 	if(c_sign == '\0' && s_sign == '\0')
-		return (s_sign)
+		return (s_sign);
 
 	return (NULL);
+}
+
+int main(){
+	char buf[] = "o teste teta";
+	int ch = "t";
+	char ptr;
+	ptr = ft_strchr(buf, ch);
+	printf("%s", ptr);
 }
