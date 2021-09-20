@@ -18,12 +18,13 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, int len)
 	char	*p_src;
 	char	*p_dst;
 
-	*p_src = (char *)src;
-	*p_dst = (char *)dst;
+	p_src = (char *)src;
+	p_dst = (char *)dst;
 	index = 0;
 
 	if(index < len)
 	{
 		p_dst = p_src;
 	}
+	return (dst);
 }
