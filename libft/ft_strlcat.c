@@ -12,24 +12,29 @@
 
 #include "libft.h"
 
-size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t index;
-	size_t src_index
+	size_t src_index;
+	size_t dst_len;
+	size_t src_len;
 
 	index = 0;
 	src_index = 0;
-	while(dst[index] && index < dstsize)
-	{
-		index++;
-	}
+	dst_len = 0;
+	while(dst[dst_len] && dst_len < dstsize)
+		dst_len++;
 
-	while(src[src_index] && ((index + src_index) < dstsize - 1))
+	index = dst_len;
+	while(*src && (index < dstsize - 1))
 	{
-		dst[index + src_index] = src[src_index];
+		dst[index++] = src[src_index];
 		src_index++;
 	}
 
 	dst[index + src_index] = '\0';
-	return(index + ft_strlen(src));
+
+	src_len = ft_strlen(src);
+
+	return(dst_len + src_len);
 }

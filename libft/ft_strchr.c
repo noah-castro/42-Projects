@@ -14,28 +14,20 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char s_sign;
+	char *s_sign;
 	unsigned char c_sign;
 
 	s_sign = (char *)s;
-	c_sign = (unsigned char *)c;
+	c_sign = (unsigned char)c;
 
-	while(s_sign != '\0')
+	while(*s_sign)
 	{
-		if(s_sign ==  c_sign)
+		if(*s_sign ==  c_sign)
 			return (s_sign);
 		s_sign++;
 	}
-	if(c_sign == '\0' && s_sign == '\0')
+	if(c_sign == '\0' && *s_sign == '\0')
 		return (s_sign);
 
 	return (NULL);
-}
-
-int main(){
-	char buf[] = "o teste teta";
-	int ch = "t";
-	char ptr;
-	ptr = ft_strchr(buf, ch);
-	printf("%s", ptr);
 }

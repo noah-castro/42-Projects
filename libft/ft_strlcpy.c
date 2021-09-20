@@ -22,6 +22,6 @@ size_t	ft_strlcpy(char *dst, const char * restrict src, size_t dstsize)
 		dst[index] = src[index];
 		index++;
 	}
-	dst = '\0';
+	*dst = '\0';
 	return index;
 }

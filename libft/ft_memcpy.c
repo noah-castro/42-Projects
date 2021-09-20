@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, int len)
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t len)
 {
-	int	index;
+	size_t	index;
 	char	*p_src;
 	char	*p_dst;
 
